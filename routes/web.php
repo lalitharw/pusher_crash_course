@@ -20,6 +20,6 @@ Route::get("/send", function (Request $request) {
 
 Route::post("/send-message", function () {
 
-    event(new SendMessage("Sad im sas"));
+    event(new SendMessage("Sad im sad"));
     return redirect()->back();
 })->name("submit");
