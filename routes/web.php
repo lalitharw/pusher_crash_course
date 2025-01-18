@@ -1,6 +1,5 @@
 <?php
 
-use App\Events\ReceiveMessage;
 use App\Events\SendMessage;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +13,7 @@ Route::get("/receive", function () {
 
 Route::get("/send", function (Request $request) {
 
-
+    event(new SendMessage("Im sad"));
     return view("send");
 });
 
